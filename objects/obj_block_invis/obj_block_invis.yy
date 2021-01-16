@@ -1,10 +1,16 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_block_invis",
+    "path": "sprites/spr_block_invis/spr_block_invis.yy",
+  },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_block",
+    "path": "objects/obj_block/obj_block.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -17,17 +23,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_control_manager","path":"objects/obj_control_manager/obj_control_manager.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "control",
-    "path": "folders/Objects/control.yy",
+    "name": "block",
+    "path": "folders/Objects/block.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_control_manager",
+  "name": "obj_block_invis",
   "tags": [],
   "resourceType": "GMObject",
 }

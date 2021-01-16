@@ -9,9 +9,11 @@ move_dir_y = obj_control_manager.input_up - obj_control_manager.input_down;
 vx = move_dir_x * base_movespeed;
 vy = move_dir_y * base_movespeed;
 
+if (place_meeting(x + vx, y + vy, obj_block)) {
+	vx = 0;
+	vy = 0;
+}
+
 x += vx;
 y += vy;
 
-if (vx > 0) {
-	var breakpoint = 0;	
-}
