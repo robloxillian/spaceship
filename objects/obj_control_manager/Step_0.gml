@@ -7,3 +7,4 @@ input_up = keyboard_check(ord("W"));
 input_down = keyboard_check(ord("S"));
 
 input_interact = keyboard_check_pressed(ord("E"));
+input_interact_hold = keyboard_check(ord("E"));

@@ -16,7 +16,11 @@ function scr_spaceship_room_oxygen_leaked(){
 	collision_rectangle_list(cx1, cy1, cx2, cy2, obj_oxygen_leak_point, true, true, adj_leak_points, false);
 	for (var i = 0; i < ds_list_size(adj_leak_points); i++) {
 		var lp = adj_leak_points[|i];
-		var blocker = collision_rectangle(lp.bbox_left + 1, lp.bbox_top + 1, lp.bbox_right - 1, lp.bbox_bottom - 1, obj_block, true, true);
+		var blocker = noone;
+		var blocking_block = collision_rectangle(lp.bbox_left + 1, lp.bbox_top + 1, lp.bbox_right - 1, lp.bbox_bottom - 1, obj_block, true, true);
+		if (blocking_block != noone && blocking_block.damage_percent < 50) {
+				blocker = blocking_block;
+		}
 		if (blocker == noone) {
 			var door = collision_rectangle(lp.bbox_left + 1, lp.bbox_top + 1, lp.bbox_right - 1, lp.bbox_bottom - 1, obj_door, true, true);
 			if (door != noone && !door.is_open) {

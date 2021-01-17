@@ -11,3 +11,5 @@ facing_dir_x = 1;
 facing_dir_y = 0;
 
 base_movespeed = 2;
+
+work_effect = noone;
