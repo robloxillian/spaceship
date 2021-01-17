@@ -5,6 +5,7 @@
     {"id":{"name":"spr_block_damaged_2","path":"sprites/spr_block_damaged_2/spr_block_damaged_2.yy",},"order":2,},
     {"id":{"name":"obj_oxygen_manager","path":"objects/obj_oxygen_manager/obj_oxygen_manager.yy",},"order":1,},
     {"id":{"name":"scr_spaceship_rooms_oxygen_connected","path":"scripts/scr_spaceship_rooms_oxygen_connected/scr_spaceship_rooms_oxygen_connected.yy",},"order":4,},
+    {"id":{"name":"font_end","path":"fonts/font_end/font_end.yy",},"order":0,},
     {"id":{"name":"spr_door_1_opening","path":"sprites/spr_door_1_opening/spr_door_1_opening.yy",},"order":3,},
     {"id":{"name":"obj_block_damaged","path":"objects/obj_block_damaged/obj_block_damaged.yy",},"order":2,},
     {"id":{"name":"spr_button_1","path":"sprites/spr_button_1/spr_button_1.yy",},"order":0,},

@@ -3,3 +3,4 @@
 screen_alpha = 0;
 fade = -1;
 shake_intensity = 0;
+end_message_chars = 0;
