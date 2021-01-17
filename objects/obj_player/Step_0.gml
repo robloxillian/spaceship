@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if (is_dying) {
+	vx = 0;
+	vy = 0;
+	return;	
+}
 
 // input processing
 move_dir_x = -1 * obj_control_manager.input_left + obj_control_manager.input_right;
@@ -25,8 +30,8 @@ if (move_dir_x == 0 && move_dir_y != 0) {
 
 
 // interact processing
-var pw = sprite_get_width(spr_player);
-	var ph = sprite_get_height(spr_player);
+var pw = global.TILE_SIZE;
+	var ph = global.TILE_SIZE;
 	var ix1 = bbox_left;
 	if (facing_dir_x != 0) {
 		ix1 += 	facing_dir_x * pw;
@@ -40,6 +45,8 @@ var pw = sprite_get_width(spr_player);
 	var interact_target = collision_rectangle(ix1, iy1, 
 		ix1 + iw, iy1 + ih, obj_interactable, true, true);
 if (interact_target == noone) {
+	//TODO: redo how block repair works (if we keep it at all)
+	/*
 	var possible_blocks = ds_list_create();
 	collision_rectangle_list(ix1, iy1, 
 		ix1 + iw, iy1 + ih, obj_block, true, true, possible_blocks, true);
@@ -50,12 +57,15 @@ if (interact_target == noone) {
 				break;
 		}
 	}
+	*/
 }
 var has_work_effect = false;
 if (interact_target != noone) {
 	if (is_interacting) {
 		if (interact_target.object_index == obj_button) {
 			scr_press_button(interact_target);
+		} else if (interact_target.object_index == obj_door) {
+			scr_open_close_door(interact_target);
 		}
 		is_interacting = false;	
 	}
@@ -93,3 +103,17 @@ if (blocker != noone) {
 x += vx;
 y += vy;
 
+//animation state
+if (vx > 0) {
+	image_xscale = 1;	
+} else if (vx < 0) {
+	image_xscale = -1;	
+}
+if (abs(vx) > 0 || abs(vy) > 0) {
+	sprite_index = spr_player_run;	
+} else {
+	sprite_index = spr_player_idle;	
+}
+
+// oxygen
+scr_player_oxygen_update(self);

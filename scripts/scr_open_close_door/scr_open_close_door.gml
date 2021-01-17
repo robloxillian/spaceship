@@ -5,6 +5,10 @@ function scr_open_close_door(){
 	if (door.is_changing_state) {
 		return;	
 	}
+	if (collision_rectangle(door.bbox_left, door.bbox_top, door.bbox_right, door.bbox_bottom, obj_player,
+		true, false)) {
+			return;	
+		}
 	if (door.is_open) {
 		door.sprite_index = spr_door_1_closing;
 		door.is_changing_state = true;	

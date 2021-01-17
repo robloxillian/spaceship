@@ -13,3 +13,8 @@ facing_dir_y = 0;
 base_movespeed = 2;
 
 work_effect = noone;
+
+//oxygen
+
+lung_oxygen = 100;
+is_dying = false;

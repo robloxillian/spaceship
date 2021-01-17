@@ -5,8 +5,8 @@ function scr_spaceship_rooms_oxygen_connected(){
 	var ssr2 = argument[1];
 	var cx1 = 0;
 	var cy1 = 0;
-	var cx_step = sprite_get_width(spr_block);
-	var cy_step = sprite_get_height(spr_block);
+	var cx_step = global.TILE_SIZE;
+	var cy_step = global.TILE_SIZE;
 	var cx2 = 0;
 	var cy2 = 0;
 	if (ssr1.bbox_left >= ssr2.bbox_right) {

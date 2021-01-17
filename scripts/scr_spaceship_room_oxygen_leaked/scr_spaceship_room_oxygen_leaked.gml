@@ -4,8 +4,8 @@ function scr_spaceship_room_oxygen_leaked(){
 	var ssr = argument[0];
 	var total_oxygen_leaked = 0;
 	
-	var cx_step = sprite_get_width(spr_block);
-	var cy_step = sprite_get_height(spr_block);
+	var cx_step = global.TILE_SIZE;
+	var cy_step = global.TILE_SIZE;
 	var cx1 = ssr.bbox_left - cx_step;
 	var cy1 = ssr.bbox_top - cy_step;
 	

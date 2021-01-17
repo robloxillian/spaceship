@@ -8,7 +8,14 @@ var shake_ratio = danger_counter > global.GAME_SHOW_END_MESSAGE_STEPS ?
 		- global.MAX_SHAKE_INTENSITY*(danger_counter - global.GAME_SHOW_END_MESSAGE_STEPS)/global.GAME_STOP_SHAKING_STEPS)
 		: danger_counter/global.GAME_FINISH_STEPS;
 obj_graphics_manager.shake_intensity = lerp(0, global.MAX_SHAKE_INTENSITY, shake_ratio);
-
+if (obj_player.is_dying) {
+	game_is_ending = false;
+	player_death_counter++;
+	if (player_death_counter > global.SHOW_DEATH_MESSAGE_STEPS) {
+		obj_graphics_manager.death_message_chars 
+			= floor((player_death_counter - global.SHOW_DEATH_MESSAGE_STEPS)/10);
+	}
+}
 if (game_is_ending) {
 	obj_graphics_manager.fade = 1;
 	if (danger_counter > global.GAME_SHOW_END_MESSAGE_STEPS) {

@@ -3,8 +3,8 @@
 function scr_adjacent_spaceship_rooms(){
 	var ss_room = argument[0];
 	var adjacent_rooms = ds_list_create();
-	var bw = sprite_get_width(spr_block);
-	var bh = sprite_get_height(spr_block);
+	var bw = global.TILE_SIZE;
+	var bh = global.TILE_SIZE;
 	with (ss_room) {
 		collision_rectangle_list(ss_room.bbox_left - bw - 1, ss_room.bbox_top - bh - 1,
 			ss_room.bbox_right + bw + 1, ss_room.bbox_bottom + bh + 1,
