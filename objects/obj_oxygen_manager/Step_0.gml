@@ -1,4 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-scr_spaceship_room_oxygen_update(self);
-
+//scr_oxygen_update();
+oxygen_timer++;

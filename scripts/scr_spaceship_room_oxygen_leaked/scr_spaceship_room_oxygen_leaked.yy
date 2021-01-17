@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "spaceship_room",
-    "path": "folders/Scripts/spaceship_room.yy",
+    "name": "oxygen",
+    "path": "folders/Scripts/spaceship_room/oxygen.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_spaceship_room_calculate_area",
+  "name": "scr_spaceship_room_oxygen_leaked",
   "tags": [],
   "resourceType": "GMScript",
 }
