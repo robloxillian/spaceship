@@ -46,7 +46,7 @@ var pw = global.TILE_SIZE;
 		ix1 + iw, iy1 + ih, obj_interactable, true, true);
 if (interact_target == noone) {
 	//TODO: redo how block repair works (if we keep it at all)
-	/*
+	
 	var possible_blocks = ds_list_create();
 	collision_rectangle_list(ix1, iy1, 
 		ix1 + iw, iy1 + ih, obj_block, true, true, possible_blocks, true);
@@ -57,7 +57,7 @@ if (interact_target == noone) {
 				break;
 		}
 	}
-	*/
+	
 }
 var has_work_effect = false;
 if (interact_target != noone) {
